@@ -9,19 +9,39 @@
 
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="btn_toast"
         android:background="@color/colorPrimary"
+        android:onClick="btn_toast"
+
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white"
-
         tools:text="Toast" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_zero"
+        android:onClick="btn_zero"
+        android:text="@string/button_label_zero"
+        android:textColor="#fff"
+        android:layout_below="@+id/button_toast"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#808080"
+
+        />
     <TextView
         android:id="@+id/show_count"
         android:layout_width="match_parent"
@@ -37,29 +57,27 @@
         android:textColor="@color/colorPrimary"
         android:textSize="160sp"
         android:textStyle="bold"
-         android:layout_below="@+id/button_toast"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
 
+        android:layout_toRightOf="@+id/button_toast"
         android:background="@android:color/black"
-
-        tools:text="0" />
+        tools:text="0"
+        android:layout_toEndOf="@+id/button_toast" />
 
     <Button
         android:id="@+id/button_count"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_zero"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="btn_count"
         android:background="@color/colorPrimary"
+        android:onClick="btn_count"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white"
-        android:layout_below="@+id/show_count"
-        android:layout_centerHorizontal="true"
 
         tools:text="Count" />
 
