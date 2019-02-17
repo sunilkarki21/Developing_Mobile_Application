@@ -25,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void btn_count(View view) {
+        btnzer.setBackgroundResource(R.color.red);
+
+        int count= Integer.parseInt(textView.getText().toString());
         count++;
         textView.setText(""+count);
-        btnzer.setBackgroundResource(R.color.red);
 
     }
 
