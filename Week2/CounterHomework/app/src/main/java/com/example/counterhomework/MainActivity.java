@@ -21,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "onCreate");
 
         txtview=findViewById(R.id.textView);
+// Restore the state.
+        if (savedInstanceState != null) {
+            txtview.setText(savedInstanceState.getString("reply_text"));
+
+        }
 
 
     }
@@ -28,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+
+             outState.putBoolean("reply_visible", true);
+             outState.putString("reply_text",txtview.getText().toString());
 
 
     }
