@@ -1,5 +1,6 @@
 package com.example.helloworld;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +26,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_toast(View view) {
-        Toast toast=Toast.makeText(this,"Hello Toast",Toast.LENGTH_LONG );
-        toast.show();
+        String s="Hello!";
+        String c= Integer.toString(count);
+        Intent i= new Intent(MainActivity.this,NewActivity.class);
+
+        i.putExtra("Mykey", s);
+        i.putExtra("count",c);
+
+        startActivity(i);
+
     }
 }

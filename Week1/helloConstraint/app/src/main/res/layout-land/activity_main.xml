@@ -29,6 +29,7 @@
         android:id="@+id/btn_zero"
         android:text="@string/button_label_zero"
         android:textColor="#fff"
+        android:onClick="btn_zero"
         android:layout_below="@+id/button_toast"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
